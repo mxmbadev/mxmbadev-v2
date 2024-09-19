@@ -1,0 +1,91 @@
+title: 'My Work'
+tabs:
+  projects:
+    display: Projects
+    sections:
+      -
+        display: 'Basic Information'
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              width: 50
+              validate:
+                - required
+          -
+            handle: website
+            field:
+              type: toggle
+              display: Website
+              instructions: 'Toggle if it has a website'
+              width: 50
+          -
+            handle: card_image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Card Image'
+              instructions: 'Homepage Card Image'
+              width: 50
+          -
+            handle: website_url
+            field:
+              antlers: true
+              type: text
+              display: 'Website Url'
+              width: 50
+              if:
+                website: 'equals true'
+          -
+            handle: card_description
+            field:
+              antlers: true
+              type: textarea
+              display: 'Card Description'
+              instructions: 'Add Project Card Description'
+      -
+        display: 'Details Page'
+        fields:
+          -
+            handle: project_details
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: 'Project Details'
+              sets:
+                add_image:
+                  display: 'Add Image'
+                  icon: media-image-picture-orientation
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: project_details_image
+                          field:
+                            max_files: 1
+                            container: assets
+                            type: assets
+                            display: 'Project Details Image'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: work_type
+            field:
+              taxonomies:
+                - work_type
+              type: terms
+              display: 'Work Type'
+              mode: typeahead

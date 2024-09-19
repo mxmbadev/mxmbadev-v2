@@ -1,0 +1,73 @@
+title: Homepage
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: hero_title
+            field:
+              antlers: true
+              type: text
+              display: 'Hero Title'
+          -
+            handle: intro_ctas
+            field:
+              type: replicator
+              display: 'Intro CTAS'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: cta_text
+                          field:
+                            antlers: true
+                            type: text
+                            display: 'CTA Text'
+                            width: 50
+                        -
+                          handle: cta_url
+                          field:
+                            antlers: true
+                            type: text
+                            display: 'CTA URL'
+                            width: 50
+          -
+            handle: bio_bard
+            field:
+              remove_empty_nodes: false
+              type: bard
+              display: Bio
+              antlers: true
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
