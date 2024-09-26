@@ -6,5 +6,7 @@ website: false
 work_type:
   - web-design
 updated_by: ed897c11-12d0-45c6-a5cf-4788e68fbb34
-updated_at: 1726718775
+updated_at: 1726795866
+card_image: projects/nail-salon-template.jpg
+card_description: 'This is a design template I created for a Hair Salon business. My goal was to create a beautiful and modern template that gives a hair salon vibe. By picking the right colors and images I ended up with this great hair salon template.'
 ---

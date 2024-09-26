@@ -1,10 +1,21 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 /* Global Styles */
+:root {
+    --blue: #07A5D2;  /* Blue */
+    --dark-grey: #2d2d2d; /* Green */
+}
+
+/* NAV */
+.navbar-brand { color: #fff; }
+.nav-link { color: #fff; &:hover{ color: var(--blue); } }
 body { 
     background-color: #000;
     color: #fff;
     h1, h2, h3, h4, h5, h6 { font-family: 'Roboto1', sans-serif; font-weight: 700; letter-spacing: 1px; }
-    .btn-main { background-color: #2d2d2d; color: #fff; padding: 8px 12px; }
+    h2.title { font-size: 4rem; }
+    .btn-main { background-color: #2d2d2d; border: 1px solid #2d2d2d; color: #fff; padding: 10px 25px; 
+        &:hover { background-color: var(--blue); border-color: var(--blue); }
+    }
     p { font-family: 'Lato', sans-serif; }
 }
 /* HomePage */
@@ -12,4 +23,27 @@ body {
 #hero { 
     padding: 5em 0em;
     h1 { font-size: 5rem; }
+ }
+
+
+ #work {
+    padding: 6% 0;
+    .category-list{
+        margin-top: 3%;
+        padding-bottom: 3%;
+        .categories{
+            padding: 0 10px;
+            width: auto;
+            a.active-category{
+                background-color: var(--blue);
+            }
+        }
+    }
+    .project-card { 
+        a {
+            text-decoration: none; color: #fff;
+            img { border-radius: .25em; }
+            p span { color: var(--blue); }
+        }
+     }
  }

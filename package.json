@@ -16,6 +16,8 @@
     "dependencies": {
         "@popperjs/core": "^2.11.8",
         "bootstrap": "^5.3.3",
-        "isotope-layout": "^3.0.6"
+        "isotope-layout": "^3.0.6",
+        "jquery": "^3.7.1",
+        "jquery-bridget": "^3.0.1"
     }
 }
