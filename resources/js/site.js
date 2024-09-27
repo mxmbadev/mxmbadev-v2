@@ -35,27 +35,21 @@ jQuery(function($) {
     });
 });
 
-// jQuery(function($) {
-//     // Initialize Isotope on the .projects container
-//     var $grid = $('.projects').isotope({
-//         itemSelector: ".grid-item",
-//         filter: "*",
-//         layoutMode: 'fitRows' // You can use 'masonry' if preferred
-//     });
-
-//     // Add filter event to categories links
-//     $('.categories a').on("click", function(e) {
-//         e.preventDefault(); // Prevent default link behavior
-//         var selector = $(this).attr('data-filter');
-        
-//         // Filter projects
-//         $grid.isotope({ filter: selector });
-
-//         // Change active class on click
-//         $('a.active-category').removeClass('active-category');
-//         $(this).addClass('active-category');
-
-//         // Trigger layout after filtering
-//         $grid.isotope('layout');
-//     });
-// });
+// Rotating Word Effect on Homepage Hero
+$(document).ready(function() {
+    // Array of words to loop through
+    var words = ["Designer", "Developer", "Photographer"];
+    var index = 0;  // Initialize index to track the current word
+  
+    // Function to loop through words
+    function loopWord() {
+      index = (index + 1) % words.length; // Move to the next word
+      $(".looping-word").fadeOut(300, function() {
+        $(this).text(words[index]).fadeIn(300);  // Update text with new word
+      });
+    }
+  
+    // Run the loop every 2 seconds
+    setInterval(loopWord, 2000);
+  });
+  

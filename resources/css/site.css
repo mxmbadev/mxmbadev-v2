@@ -7,27 +7,35 @@
 
 /* NAV */
 .navbar-brand { color: #fff; }
-.nav-link { color: #fff; &:hover{ color: var(--blue); } }
+.nav-item:last-child .nav-link { color: orange; }
+.nav-link { color: #fff; 
+    &:hover{ color: var(--blue); }
+}
+
 body { 
     background-color: #000;
     color: #fff;
-    h1, h2, h3, h4, h5, h6 { font-family: 'Roboto1', sans-serif; font-weight: 700; letter-spacing: 1px; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Roboto1', sans-serif; font-weight: 700 !important; letter-spacing: 1px; }
     h2.title { font-size: 4rem; }
     .btn-main { background-color: #2d2d2d; border: 1px solid #2d2d2d; color: #fff; padding: 10px 25px; 
         &:hover { background-color: var(--blue); border-color: var(--blue); }
     }
-    p { font-family: 'Lato', sans-serif; }
+    .btn-alt { background-color: transparent; border: 2px solid #fff; color: #fff; padding: 10px 25px; 
+        &:hover { background-color: #fff; border-color: #fff; color:#000 }
+    }
+    p { font-family: 'Lato', sans-serif; font-size: 16px; }
 }
 /* HomePage */
 
 #hero { 
-    padding: 5em 0em;
-    h1 { font-size: 5rem; }
+    padding: 8em 0em 1em 0em;
+    h1 { font-size: 4rem; }
+    .looping-word { color: orange; }
+    p { font-size: 20px; }
  }
 
-
  #work {
-    padding: 6% 0;
+    padding: 5% 0;
     .category-list{
         margin-top: 3%;
         padding-bottom: 3%;
@@ -46,4 +54,16 @@ body {
             p span { color: var(--blue); }
         }
      }
+ }
+
+ #slogan {
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    .slogan-content{
+        padding: 20% 0;
+        margin: 0 auto;
+        text-align: center;
+        h1{ color: #fff; }
+    }
  }

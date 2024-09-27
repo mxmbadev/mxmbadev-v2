@@ -51,6 +51,23 @@ tabs:
               type: bard
               display: Bio
               antlers: true
+      -
+        display: 'Slogan Section'
+        fields:
+          -
+            handle: slogan_text
+            field:
+              antlers: true
+              type: text
+              display: 'Slogan Text'
+          -
+            handle: slogan_background
+            field:
+              max_files: 1
+              container: assets
+              folder: backgrounds
+              type: assets
+              display: 'Slogan Background'
   sidebar:
     display: Sidebar
     sections:

@@ -2,19 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="pb-4">{{ hero_title }}</h1>
+                <h1 id="rotatingWord" class="pb-4"><span class="looping-word">Designer</span>: {{ hero_title }}</h1>
+                {{ bio_bard }}
                 {{ intro_ctas }}
                 <a href="{{ cta_url }}" class="btn btn-main me-2">{{ cta_text }}</a>
                 {{ /intro_ctas }}
-            </div>
-        </div>
-    </div>
-</section>
-<section id="bio">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                {{ bio_bard }}
             </div>
         </div>
     </div>
@@ -54,28 +46,14 @@
                 </div>
                 {{ /collection:my_work }}
             </div>
-            {{# <div class="col-md-12 d-none d-xl-block">
-                {{ collection:my_work as="projects" }}
-                    {{ projects }}
-                    <!-- Open a new row for every group of 3 items -->
-                        {{ if index % 3 == 0 }}
-                        <div class="row projects pb-4">
-                        {{ /if }}
-                            <!-- Grid item -->
-                            <div class="grid-item project-card col-xl-4 col-md-6 col-xs-12 {{ work_type }} {{ slug }} {{ /work_type }} pb-2">
-                                <a href="{{ url }}">
-                                    <img class="img-fluid mb-3" src="{{ card_image }}" alt="{{ alt }}">
-                                    <h2>{{ title | widont }}</h2>
-                                    <p>{{ excerpt | widont ?? card_description | strip_tags | safe_truncate:160:... }}</p>
-                                </a>
-                            </div>
-                    <!-- Close the row after every third item or the last item -->
-                        {{ if (index + 1) % 3 == 0 || loop.last }}
-                        </div> <!-- Close the row -->
-                        {{ /if }}
-                    {{ /projects }} 
-                {{ /collection:my_work }}
-            </div> #}}
+        </div>
+    </div>
+</section>
+<section id="slogan" style="background-image: url('{{ slogan_background }}');">
+    <div class="container">
+        <div class="col-sm-12 text-center slogan-content">
+            <h2 class="display-1">{{ slogan_text }}</h2>
+            <a href="" class="btn btn-alt btn-lg mt-3">Contact Me</a>
         </div>
     </div>
 </section>
