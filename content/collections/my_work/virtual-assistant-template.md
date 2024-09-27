@@ -6,7 +6,8 @@ website: false
 work_type:
   - web-design
 updated_by: ed897c11-12d0-45c6-a5cf-4788e68fbb34
-updated_at: 1726796798
+updated_at: 1727414138
 card_image: projects/stephaniecastro.jpg
 card_description: 'A sleek, contemporary design with intricate details and a touch of chic for this Virtual Assistant template.'
+project_background_color: '#6b9a8a'
 ---

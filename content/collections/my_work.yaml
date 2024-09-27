@@ -1,4 +1,5 @@
 title: 'My Work'
+route: /my_work/{slug}
 template: my_work/show
 revisions: false
 date_behavior:

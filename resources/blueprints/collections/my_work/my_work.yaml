@@ -70,6 +70,13 @@ tabs:
                             container: assets
                             type: assets
                             display: 'Project Details Image'
+          -
+            handle: project_background_color
+            field:
+              antlers: true
+              type: text
+              display: 'Project Background Color'
+              instructions: 'Add Hex Color'
   sidebar:
     display: Sidebar
     sections:
