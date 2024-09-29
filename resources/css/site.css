@@ -72,8 +72,8 @@ body {
  /* Project Detail Pages */
  #projectHero {
     margin-top: -64px;
-    padding-top: 20px;
-    .hero-content { position: relative; left: 0; right: 0; bottom: -190px; max-width: 100%; display: flex; flex-direction: column; align-items: center; 
+    padding: 0px 0 160px 0px;
+    .hero-content { position: relative; left: 0; right: 0; bottom: -280px; max-width: 100%; display: flex; flex-direction: column; align-items: center;  
         .button-container { padding-top: 1rem; width: 500px; display: flex; justify-content: space-between; div { width: 245px; } }
     }
  }
