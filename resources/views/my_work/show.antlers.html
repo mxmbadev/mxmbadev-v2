@@ -1,4 +1,4 @@
-<section id="projectHero" style="background-color: {{ project_background_color }};">
+{{# <section id="projectHero" style="background-color: {{ project_background_color }};">
     <div class="container">
         <div class="col-12 text-center hero-content">
             <h1 class="display-1 pb-4">{{ title }}</h1>
@@ -13,14 +13,47 @@
             </div>
         </div>
     </div>
+</section> #}}
+
+<section id="projectHeroTwo" class="py-4" style="background-color: {{ project_background_color }};">
+    <div class="container">
+        <div class="col-12 text-left hero-content">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>{{ title }}</h1>
+                </div>
+                <div class="col-sm-4">
+                    <a href="{{ website_url }}" class="btn btn-alt btn-lg me-1" target="_blank">Visit Website</a>
+                    <a href="{{ homepage }}#work" class="btn btn-alt btn-lg">View All Projects</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section id="project-details">
+
+<section id="projectDetails" class="pt-5">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
+                <p class="lead">{{ card_description }}</p>
+                <p class="work-type">{{ work_type }} {{ if last }} {{ title }} {{ else }} {{ title }} / {{ /if }} {{ /work_type }}</p>
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ card_image }}" alt="{{ alt }}" class="img-responsive rounded-1">
+            </div>
+            <div class="col-sm-12 pt-5">
+                <h2>Project Details</h2>
                 {{ project_details }}
-                    
+                    {{ if type == "text" }}
+                        {{ text }}
+                    {{ elseif type == "new_image_set" }}
+                        {{ project_details_image }}
+                        <img src="{{ url }}" class="w-100 my-4 rounded-1" alt="{{ alt }}">
+                        {{ /project_details_image }}
+                    {{ /if }}
+                {{ /project_details }}
             </div>
         </div>
     </div>

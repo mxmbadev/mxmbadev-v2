@@ -77,3 +77,7 @@ body {
         .button-container { padding-top: 1rem; width: 500px; display: flex; justify-content: space-between; div { width: 245px; } }
     }
  }
+
+ #projectDetails {
+    .work-type { color: var(--blue); }
+ }
