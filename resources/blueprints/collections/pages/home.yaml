@@ -51,6 +51,13 @@ tabs:
               type: bard
               display: Bio
               antlers: true
+          -
+            handle: hero_image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Hero Image'
       -
         display: 'Slogan Section'
         fields:

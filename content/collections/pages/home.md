@@ -17,7 +17,7 @@ intro_ctas:
     type: new_set
     enabled: true
 updated_by: ed897c11-12d0-45c6-a5cf-4788e68fbb34
-updated_at: 1727327725
+updated_at: 1728433182
 hero_title: 'Bringing Ideas to Life'
 bio_bard:
   -
@@ -34,4 +34,5 @@ bio_bard:
         text: 'If you need a website for your business or want to add more talent to your dev team, don’t hesitate to contact me! Or if you are here just for fun, why not say hi? 👋'
 slogan_text: 'Turn Your Vision into a Reality'
 slogan_background: backgrounds/background1.jpg
+hero_image: backgrounds/blurred-background.jpg
 ---

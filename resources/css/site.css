@@ -1,83 +1,243 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+/* @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Quicksand:wght@300..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Global Styles */
 :root {
-    --blue: #07A5D2;  /* Blue */
-    --dark-grey: #2d2d2d; /* Green */
+    --blue: #07A5D2;
+    /* Blue */
+    --dark-grey: #2d2d2d;
+    /* Green */
 }
+
+.archivo-black-regular {
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.istok-web-regular {
+    font-family: "Istok Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.istok-web-bold {
+    font-family: "Istok Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.istok-web-regular-italic {
+    font-family: "Istok Web", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.istok-web-bold-italic {
+    font-family: "Istok Web", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
 
 /* NAV */
-nav { background: transparent; }
-.navbar-brand { color: #fff; font-size: 25px; }
-.nav-item:last-child .nav-link { color: orange; }
-.nav-link { color: #fff; font-size: 20px;
-    &:hover{ color: var(--blue); }
+nav {
+    background: transparent;
 }
 
-body { 
-    background-color: #000;
+.navbar-brand {
     color: #fff;
-    h1, h2, h3, h4, h5, h6 { font-family: 'Roboto1', sans-serif; font-weight: 700 !important; letter-spacing: 1px; }
-    h2.title { font-size: 4rem; }
-    .btn-main { background-color: #2d2d2d; border: 1px solid #2d2d2d; color: #fff; padding: 10px 25px; 
-        &:hover { background-color: var(--blue); border-color: var(--blue); }
-    }
-    .btn-alt { background-color: transparent; border: 2px solid #fff; color: #fff; padding: 10px 25px; 
-        &:hover { background-color: #fff; border-color: #fff; color:#000 }
-    }
-    p, a, li { font-family: 'Lato', sans-serif; font-size: 16px; }
+    font-size: 25px;
 }
+
+.nav-item:last-child .nav-link {
+    color: var(--blue);
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 20px;
+
+    &:hover {
+        color: var(--blue);
+    }
+}
+
+#particles-js canvas {
+    pointer-events: auto;
+    /* Allow canvas to detect events */
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Puts it behind other content */
+    pointer-events: none;
+    /* Allows clicks to pass through */
+}
+
+
+body {
+    background-color: #000;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: none;
+    color: #fff;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900 !important;
+        letter-spacing: 1px;
+    }
+
+    h2.title {
+        font-size: 4rem;
+    }
+
+    .btn-main {
+        background-color: #2d2d2d;
+        border: 1px solid #2d2d2d;
+        color: #fff;
+        padding: 10px 25px;
+
+        &:hover {
+            background-color: var(--blue);
+            border-color: var(--blue);
+        }
+    }
+
+    .btn-alt {
+        background-color: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        padding: 10px 25px;
+
+        &:hover {
+            background-color: #fff;
+            border-color: #fff;
+            color: #000
+        }
+    }
+
+    p,
+    a,
+    li,
+    .btn {
+        font-family: "Istok Web", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
 /* HomePage */
-
-#hero { 
+#hero {
     padding: 8em 0em 1em 0em;
-    h1 { font-size: 4rem; }
-    .looping-word { color: orange; }
-    p { font-size: 20px; }
- }
 
- #work {
+    h1 {
+        font-size: 3.8rem;
+    }
+
+    .looping-word {
+        color: var(--blue);
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+#work {
     padding: 5% 0;
-    .category-list{
+
+    .category-list {
         margin-top: 3%;
         padding-bottom: 3%;
-        .categories{
+
+        .categories {
             padding: 0 10px;
             width: auto;
-            a.active-category{
+
+            a.active-category {
                 background-color: var(--blue);
             }
         }
     }
-    .project-card { 
-        a {
-            text-decoration: none; color: #fff;
-            img { border-radius: .25em; }
-            p span { color: var(--blue); }
-        }
-     }
- }
 
- #slogan {
+    .project-card {
+        a {
+            z-index: 2;
+            text-decoration: none;
+            color: #fff;
+            
+            h2 { font-weight: 700 !important; }
+            img {
+                border-radius: .25em;
+            }
+
+            p span {
+                color: var(--blue);
+            }
+        }
+    }
+}
+
+#slogan {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    .slogan-content{
+
+    .slogan-content {
         padding: 20% 0;
         margin: 0 auto;
         text-align: center;
-        h1{ color: #fff; }
-    }
- }
 
- /* Project Detail Pages */
- #projectHero {
+        h1 {
+            color: #fff;
+        }
+    }
+}
+
+/* Project Detail Pages */
+#projectHero {
     margin-top: -64px;
     padding: 0px 0 160px 0px;
-    .hero-content { position: relative; left: 0; right: 0; bottom: -280px; max-width: 100%; display: flex; flex-direction: column; align-items: center;  
-        .button-container { padding-top: 1rem; width: 500px; display: flex; justify-content: space-between; div { width: 245px; } }
-    }
- }
 
- #projectDetails {
-    .work-type { color: var(--blue); }
- }
+    .hero-content {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: -280px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .button-container {
+            padding-top: 1rem;
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                width: 245px;
+            }
+        }
+    }
+}
+
+#projectDetails {
+    .work-type {
+        color: var(--blue);
+    }
+}
